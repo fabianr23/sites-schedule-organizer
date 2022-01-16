@@ -27,7 +27,9 @@
     </section>
     <section class="sites-list" ref="scrollComponent">
       <div class="site-title" v-for="site in sitesList" :key="site.id">
-        {{ site.title }}
+        <router-link :to="'/sites/' + site.id" class="site-link">
+          {{ site.title }}
+        </router-link>
       </div>
     </section>
   </div>
@@ -41,6 +43,7 @@ import { PROPERTY_TYPES } from "@/helpers/constants.ts";
 import {
   getSitesByPageNumber,
   getSitesByCategory,
+  getSitesByQuery,
 } from "@/helpers/getSites.ts";
 
 import HeaderComponent from "@/components/HeaderComponent.vue";
@@ -103,16 +106,14 @@ export default {
       }
     };
 
-    const handleSearch = async (event: Event) => {
-      const target = event.target as HTMLInputElement;
-      if (target.value === "All Sites") {
+    const handleSearch = async () => {
+      console.log(searchQuery.value);
+      if (searchQuery.value !== "") {
+        sitesList.value = await getSitesByQuery(searchQuery.value);
+      } else {
         const resetPage = 1;
         sitesList.value = await getSitesByPageNumber(resetPage);
         pageNumber.value = resetPage;
-        categorySelected.value = false;
-      } else {
-        sitesList.value = await getSitesByCategory(target.value);
-        categorySelected.value = true;
       }
     };
 
@@ -122,6 +123,7 @@ export default {
       scrollComponent,
       PROPERTY_TYPES,
       handleChangeProperty,
+      handleSearch,
     };
   },
 };
