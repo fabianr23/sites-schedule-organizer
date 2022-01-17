@@ -1,5 +1,5 @@
 <template>
-  <div class="site-detail">
+  <div class="site-detail wrap-container">
     <header>
       <HeaderComponent />
     </header>
@@ -28,11 +28,9 @@ export default {
     const site = ref({});
     const route = useRoute();
 
-    onBeforeMount(() => {
-      onBeforeMount(async () => {
-        const siteInfo = await getSitesByFilter("id", route.params.id);
-        site.value = siteInfo[0];
-      });
+    onBeforeMount(async () => {
+      const siteInfo = await getSitesByFilter("id", route.params.id);
+      site.value = siteInfo[0];
     });
 
     return {

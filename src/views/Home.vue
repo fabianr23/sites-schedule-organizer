@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home wrap-container">
     <header>
-      <HeaderComponent />
+      <HeaderComponent :title="'Scheduling'" />
       <div class="section-title">
         <h2>Sites</h2>
       </div>
@@ -21,14 +21,18 @@
       <div class="filters__search">
         <form @submit.prevent="handleSearch()" class="search-box">
           <input type="text" placeholder="Search..." v-model="searchQuery" />
-          <input type="submit" value="Search" />
+          <font-awesome-icon icon="search" />
         </form>
       </div>
     </section>
     <section class="sites-list" ref="scrollComponent">
-      <div class="site-title" v-for="site in sitesList" :key="site.id">
+      <div
+        class="sites-anchor-container"
+        v-for="site in sitesList"
+        :key="site.id"
+      >
         <router-link :to="'/sites/' + site.id" class="site-link">
-          {{ site.title }}
+          <SiteAnchorCard :site="site" />
         </router-link>
       </div>
     </section>
@@ -47,10 +51,12 @@ import {
 } from "@/helpers/getSites.ts";
 
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import SiteAnchorCard from "@/components/SiteAnchorCard.vue";
 
 export default {
   components: {
     HeaderComponent,
+    SiteAnchorCard,
   },
 
   setup() {
@@ -82,13 +88,13 @@ export default {
     const handleScroll = () => {
       let element = scrollComponent.value;
 
-      const isElementVisible =
-        element?.getBoundingClientRect().bottom < window.innerHeight;
+      const isBottomReached =
+        element?.getBoundingClientRect().bottom <= window.innerHeight;
 
       const isAbleToScroll =
-        !categorySelected.value && searchQuery.value.length == 0;
+        !categorySelected.value && searchQuery.value.length === 0;
 
-      if (isElementVisible && isAbleToScroll) {
+      if (isBottomReached && isAbleToScroll) {
         loadMoreSites();
       }
     };
@@ -130,7 +136,51 @@ export default {
 </script>
 
 <style lang="scss">
-.site-title {
-  margin-bottom: 25px;
+.section-title {
+  background-color: #2a77e4;
+  padding: 10px;
+  border-bottom: 2px solid #3c3c3c;
+  text-align: center;
+  color: #fff;
+
+  h2 {
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-top: 1px;
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    color: #3c3c3c;
+    background: #ccc;
+    padding-right: 5px;
+  }
+
+  select,
+  input[type="text"] {
+    border: 2px solid #ccc;
+    color: #3c3c3c;
+    &:focus-visible {
+      border-color: #525252;
+      outline: none;
+    }
+  }
+
+  select {
+    height: 36px;
+  }
+
+  input[type="text"] {
+    height: 30px;
+    width: 105px;
+    margin-right: 5px;
+  }
 }
 </style>

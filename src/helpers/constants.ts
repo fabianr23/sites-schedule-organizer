@@ -11,3 +11,5 @@ export const PROPERTY_TYPES = [
   "Sports Shop",
   "Kids Shop",
 ];
+export const IMAGE_NOT_FOUND =
+  "https://www.freeiconspng.com/thumbs/building-icon/office-building-icon-32.png";
