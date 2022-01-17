@@ -32,7 +32,7 @@
         :key="site.id"
       >
         <router-link :to="'/sites/' + site.id" class="site-link">
-          <SiteAnchorCard :site="site" />
+          <SiteAnchorCard :site="site" :arrow-position="'right'" />
         </router-link>
       </div>
     </section>

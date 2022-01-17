@@ -1,5 +1,8 @@
 <template>
   <section class="site-anchor">
+    <div v-if="arrowPosition === 'left'" class="site-anchor__arrow">
+      <font-awesome-icon icon="angle-left" />
+    </div>
     <figure class="site-anchor__image">
       <!-- TODO: apply below format once API response has images working -->
       <!-- <img :src="site?.images ? site.images[0] : IMAGE_NOT_FOUND" alt="" /> -->
@@ -10,7 +13,7 @@
       <address>{{ site?.address?.street }} - {{ site?.address?.city }}</address>
       <span>{{ site?.contacts?.main?.email }}</span>
     </div>
-    <div class="site-anchor__arrow">
+    <div v-if="arrowPosition === 'right'" class="site-anchor__arrow">
       <font-awesome-icon icon="angle-right" />
     </div>
   </section>
@@ -22,6 +25,7 @@ import { IMAGE_NOT_FOUND } from "@/helpers/constants.ts";
 export default {
   props: {
     site: Object,
+    arrowPosition: String,
   },
 
   setup() {
