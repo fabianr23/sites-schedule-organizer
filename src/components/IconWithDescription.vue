@@ -1,6 +1,8 @@
 <template>
   <section class="icon-info">
-    <font-awesome-icon class="fa-lg" :icon="icon" />
+    <figure class="icon-info__icon">
+      <font-awesome-icon class="fa-lg" :icon="icon" />
+    </figure>
     <div class="icon-info__description">
       <p>
         {{ title }}
@@ -25,6 +27,11 @@ export default {
   display: flex;
   padding: 25px 30px 0;
   align-content: flex-start;
+
+  &__icon {
+    margin: 0;
+    width: 25px;
+  }
 
   &__description {
     margin-left: 15px;

@@ -1,7 +1,7 @@
 <template>
   <div class="site-detail wrap-container">
     <header>
-      <HeaderComponent />
+      <HeaderComponent :title="'Scheduling'" />
       <SiteAnchorCard
         class="site-detail__site-anchor"
         @click="$router.go(-1)"

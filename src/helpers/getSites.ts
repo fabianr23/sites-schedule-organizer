@@ -5,7 +5,8 @@ export const getSitesByPageNumber = (pageNumber: number): Promise<any> => {
     .then((response) => response.json())
     .then((data) => {
       return data;
-    });
+    })
+    .catch((error) => console.log("error getting sites by page number", error));
 };
 
 export const getSitesByCategory = (category: string): Promise<any> => {
@@ -13,7 +14,8 @@ export const getSitesByCategory = (category: string): Promise<any> => {
     .then((response) => response.json())
     .then((data) => {
       return data;
-    });
+    })
+    .catch((error) => console.log("error getting sites by category", error));
 };
 
 export const getSitesByQuery = (query: string): Promise<any> => {
@@ -21,7 +23,8 @@ export const getSitesByQuery = (query: string): Promise<any> => {
     .then((response) => response.json())
     .then((data) => {
       return data;
-    });
+    })
+    .catch((error) => console.log("error getting sites by search", error));
 };
 
 export const getSitesByFilter = (
@@ -32,5 +35,6 @@ export const getSitesByFilter = (
     .then((response) => response.json())
     .then((data) => {
       return data;
-    });
+    })
+    .catch((error) => console.log("error getting sites by filter", error));
 };

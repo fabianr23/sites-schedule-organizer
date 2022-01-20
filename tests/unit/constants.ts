@@ -1,0 +1,235 @@
+export const responseByNumber = [
+  {
+    id: "Qk_Ea-3Fci",
+    clientId: "Zs4Q2eUa3uzR",
+    title: "Outdoors House",
+    createdAt: "Wed Jan 20 2021 10:30:38 GMT+0000 (Coordinated Universal Time)",
+    updatedAt: "Sun Dec 05 2021 16:29:09 GMT+0000 (Coordinated Universal Time)",
+    contacts: {
+      main: {
+        id: "Z6yMTWxa7m",
+        firstName: "Rowenaaa",
+        lastName: "Grant 12345",
+        email: "Oswald.Wehner@yahoo.com",
+        phoneNumber: "(775) 387-5843",
+        jobTitle: "aaaaaaa",
+        address: {
+          zipCode: "01799-5612",
+          city: "Arianeland",
+          street: "011 Maia Spurs",
+          country: "Guinea-Bissau",
+          state: "Virginia",
+        },
+      },
+    },
+    address: {
+      zipCode: "41121-1183",
+      city: "North Houstonbury",
+      street: "77580 Bechtelar Squares",
+      country: "Wallis and Futuna",
+      state: "Maine",
+    },
+    images: [
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+    ],
+    tags: ["renovated", "state"],
+  },
+  {
+    id: "o_n6oDsVhG",
+    clientId: "Zs4Q2eUa3uzR",
+    title: "Baby Garage",
+    createdAt: "Sat Apr 17 2021 22:43:20 GMT+0000 (Coordinated Universal Time)",
+    updatedAt: "Mon Dec 06 2021 08:49:10 GMT+0000 (Coordinated Universal Time)",
+    contacts: {
+      main: {
+        id: "Q9c9Hzws-l",
+        firstName: "Clementina",
+        lastName: "Kovacek",
+        email: "Violet60@hotmail.com",
+        phoneNumber: "1-950-107-1377 x17882",
+        jobTitle: "District Web Technician",
+        address: {
+          zipCode: "49123-5170",
+          city: "Hirtheport",
+          street: "32265 Hortense Common",
+          country: "Rwanda",
+          state: "Minnesota",
+        },
+      },
+    },
+    address: {
+      zipCode: "36786-2689",
+      city: "East Jeramiechester",
+      street: "35696 Hermiston Stream",
+      country: "Turkmenistan",
+      state: "Wisconsin",
+    },
+    images: [
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+    ],
+    tags: ["old", "individual"],
+  },
+];
+
+export const responseByCategory = [
+  {
+    id: "G0xpF5luGz",
+    clientId: "Zs4Q2eUa3uzR",
+    title: "Movies HQ",
+    createdAt: "Mon Apr 26 2021 07:15:33 GMT+0000 (Coordinated Universal Time)",
+    updatedAt: "Mon Dec 06 2021 02:26:55 GMT+0000 (Coordinated Universal Time)",
+    contacts: {
+      main: {
+        id: "0aJfVSDU5Q",
+        firstName: "Kariane",
+        lastName: "Barrows",
+        email: "Abagail8@gmail.com",
+        phoneNumber: "365.497.7470",
+        jobTitle: "District Mobility Executive",
+        address: {
+          zipCode: "28771-7790",
+          city: "Hoegerville",
+          street: "3707 Gregorio Vista",
+          country: "Denmark",
+          state: "Wyoming",
+        },
+      },
+    },
+    address: {
+      zipCode: "69327",
+      city: "Wuckertmouth",
+      street: "40135 Jayson Plaza",
+      country: "Taiwan",
+      state: "Vermont",
+    },
+    images: [
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+    ],
+    tags: ["renovated", "individual"],
+  },
+  {
+    id: "EU69PFwyMZ",
+    clientId: "Zs4Q2eUa3uzR",
+    title: "Movies HQ",
+    createdAt: "Fri Feb 26 2021 18:19:14 GMT+0000 (Coordinated Universal Time)",
+    updatedAt: "Mon Dec 06 2021 01:08:55 GMT+0000 (Coordinated Universal Time)",
+    contacts: {
+      main: {
+        id: "7pDW102Tb2",
+        firstName: "Brooklyn",
+        lastName: "Haley. test 123",
+        email: "Sedrick_Weissnat@hotmail.com",
+        phoneNumber: "1-666-036-5969",
+        jobTitle: "Lead Interactions Architect bbbbbbbb",
+        address: {
+          zipCode: "21776",
+          city: "Kuhnberg",
+          street: "3875 Jules Way",
+          country: "Ireland",
+          state: "Florida",
+        },
+      },
+    },
+    address: {
+      zipCode: "30852",
+      city: "Lulamouth",
+      street: "6032 Cassin Well",
+      country: "Fiji",
+      state: "Rhode Island",
+    },
+    images: ["http://lorempixel.com/640/480/city"],
+    tags: ["new", "state"],
+  },
+];
+
+export const responseBySearch = [
+  {
+    id: "t-XZ44hlG4",
+    clientId: "Zs4Q2eUa3uzR",
+    title: "Games HQ",
+    createdAt: "Fri Apr 09 2021 06:52:29 GMT+0000 (Coordinated Universal Time)",
+    updatedAt: "Mon Dec 06 2021 00:09:51 GMT+0000 (Coordinated Universal Time)",
+    contacts: {
+      main: {
+        id: "L7EYrder5n",
+        firstName: "Lenora",
+        lastName: "Crist",
+        email: "Margie_Conroy7@gmail.com",
+        phoneNumber: "(954) 884-3233",
+        jobTitle: "Dynamic Identity Representative",
+        address: {
+          zipCode: "23599",
+          city: "Terrillside",
+          street: "263 Shanahan Manors",
+          country: "Poland",
+          state: "Vermont",
+        },
+      },
+    },
+    address: {
+      zipCode: "05018-9067",
+      city: "West Bridiefurt",
+      street: "7778 Consuelo Lights",
+      country: "Ecuador",
+      state: "Minnesota",
+    },
+    images: [
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+    ],
+    tags: ["new", "company"],
+  },
+];
+
+export const responseByFilter = [
+  {
+    id: "f_mxzowJRJm",
+    clientId: "Zs4Q2eUa3uzR",
+    title: "Games House",
+    createdAt: "Wed Jan 20 2021 11:16:21 GMT+0000 (Coordinated Universal Time)",
+    updatedAt: "Mon Dec 06 2021 02:42:36 GMT+0000 (Coordinated Universal Time)",
+    contacts: {
+      main: {
+        id: "Yse92I_0rM8",
+        firstName: "Otilia",
+        lastName: "Beatty",
+        email: "Virginie35@yahoo.com",
+        phoneNumber: "(551) 331-0737",
+        jobTitle: "Dynamic Identity Coordinator",
+        address: {
+          zipCode: "01028-0132",
+          city: "Jabariburgh",
+          street: "1337 Ritchie Light",
+          country: "Sri Lanka",
+          state: "Wyoming",
+        },
+      },
+    },
+    address: {
+      zipCode: "71373",
+      city: "North Grover",
+      street: "683 Hilll Landing",
+      country: "Chad",
+      state: "Connecticut",
+    },
+    images: [
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+      "http://lorempixel.com/640/480/city",
+    ],
+    tags: ["renovated", "company"],
+  },
+];

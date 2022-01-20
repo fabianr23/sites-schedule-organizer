@@ -20,7 +20,12 @@
       </div>
       <div class="filters__search">
         <form @submit.prevent="handleSearch()" class="search-box">
-          <input type="text" placeholder="Search..." v-model="searchQuery" />
+          <input
+            type="text"
+            placeholder="Search..."
+            v-model="searchQuery"
+            data-search
+          />
           <font-awesome-icon icon="search" />
         </form>
       </div>
@@ -113,7 +118,6 @@ export default {
     };
 
     const handleSearch = async () => {
-      console.log(searchQuery.value);
       if (searchQuery.value !== "") {
         sitesList.value = await getSitesByQuery(searchQuery.value);
       } else {
@@ -127,9 +131,10 @@ export default {
       searchQuery,
       sitesList,
       scrollComponent,
-      PROPERTY_TYPES,
       handleChangeProperty,
       handleSearch,
+      handleScroll,
+      PROPERTY_TYPES,
     };
   },
 };
